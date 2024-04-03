@@ -1,0 +1,30 @@
+html {
+    font-size: 10px;
+}
+body {
+    background: var(--orange) url('@/assets/images/bg/bg.png') no-repeat top right;
+    background-size: 160% auto;
+    color: var(--white);
+    font-family: var(--fonts);
+    font-size: 1.6rem;
+    line-height: 1.2;
+    min-height: 100vh;
+
+    &::-webkit-scrollbar-track {
+        border-radius: 8px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    &::-webkit-scrollbar {
+        background-color: var(--dark);
+        width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        background-color: var(--dark-lighter);
+    }
+}
+sub {
+    display: inline-block;
+    font-size: 0.75em;
+    transform: translateY(50%);
+}
