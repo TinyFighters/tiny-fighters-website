@@ -46,4 +46,10 @@ import Nav from '@/components/structure/Nav.vue';
         }
     }
 }
+
+@media (min-width: 440px) {
+    .header {
+        justify-content: center;
+    }
+}
 </style>

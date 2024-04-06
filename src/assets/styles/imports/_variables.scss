@@ -20,28 +20,9 @@ $lgBreakpoint: 1200px;
     --fonts: 'impact', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 
     // Sizes
-    --header-height: 40px;
-    --logo-width: 120px;
-    --tokens-list-col-width: 48px;
-    --tokens-list-age-width: 52px;
-    --tokens-list-mcap-width: 48px;
-    --tokens-list-price-width: 52px;
-    --tokens-list-value-width: 56px;
-    --tokens-list-change-width: 48px;
-    --tokens-list-swap-width: 50px;
-    --wallet-user-height: 36px;
+    --titleBgHeight: 38px;
 
-    @media (min-width: $xxxsBreakpoint) {
-        --tokens-list-swap-width: 56px;
-    }
     @media (min-width: $smBreakpoint) {
-        --header-height: 52px;
-        --tokens-list-col-width: 60px;
-        --tokens-list-age-width: 60px;
-        --tokens-list-mcap-width: 60px;
-        --tokens-list-price-width: 60px;
-        --tokens-list-value-width: 68px;
-        --tokens-list-change-width: 56px;
-        --tokens-list-swap-width: 64px;
+        --titleBgHeight: 76px;
     }
 }

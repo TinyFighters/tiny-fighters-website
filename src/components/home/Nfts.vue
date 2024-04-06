@@ -123,6 +123,9 @@ const selectedNft = ref(null);
 
 @media (min-width: 1024px) {
     .nfts {
+        margin: -680px 0;
+        padding: 700px 0;
+
         &__imgs {
             justify-content: center;
             padding-right: calc(100vw / 20);
@@ -134,9 +137,31 @@ const selectedNft = ref(null);
                 transform: scale(1.1);
             }
         }
+        &__imgs {
+            margin-bottom: 100px;
+        }
         &__img {
             max-width: 250px;
             width: calc(100vw / 7);
+        }
+        &__release {
+            margin-bottom: 100px;
+
+            &-date {
+                font-size: 2.8rem;
+                width: 400px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    .nfts {
+        &__release {
+            &-date {
+                font-size: 4rem;
+                width: 600px;
+            }
         }
     }
 }

@@ -9,21 +9,21 @@
                 <img class="team__member-img" src="@/assets/images/team/alesoir.png" />
                 <a class="team__member-x community__social" href="https://x.com" target="_blank">
                     X
-                    <img class="community__social-icon community__social-x" src="@/assets/images/icons/x.svg">
+                    <img class="team__member-icon community__social-icon community__social-x" src="@/assets/images/icons/x.svg">
                 </a>
             </div>
             <div class="team__member">
                 <img class="team__member-img" src="@/assets/images/team/napadelis.png" />
                 <a class="team__member-x community__social" href="https://x.com" target="_blank">
                     X
-                    <img class="community__social-icon community__social-x" src="@/assets/images/icons/x.svg">
+                    <img class="team__member-icon community__social-icon community__social-x" src="@/assets/images/icons/x.svg">
                 </a>
             </div>
             <div class="team__member">
                 <img class="team__member-img" src="@/assets/images/team/lenux.png" />
                 <a class="team__member-x community__social" href="https://x.com" target="_blank">
                     X
-                    <img class="community__social-icon community__social-x" src="@/assets/images/icons/x.svg">
+                    <img class="team__member-icon community__social-icon community__social-x" src="@/assets/images/icons/x.svg">
                 </a>
             </div>
         </div>
@@ -31,20 +31,19 @@
 </template>
 
 <style lang="scss">
-$titleBgHeight: 38px;
 .team {
     &__title {
         align-items: flex-start;
         background: transparent url('@/assets/images/bg/tf-horizontal-pink.png') repeat-x top center;
-        background-size: auto $titleBgHeight; // 76px
+        background-size: auto var(--titleBgHeight);
         color: transparent;
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
         font-size: 0;
         margin-bottom: 16px;
-        min-height: $titleBgHeight;
-        padding: $titleBgHeight 10% 0 0;
+        min-height: var(--titleBgHeight);
+        padding: var(--titleBgHeight) 10% 0 0;
         width: 100%;
 
         &-img { // 958px
@@ -62,6 +61,33 @@ $titleBgHeight: 38px;
         }
         &-x {
             margin-top: 12px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .team {
+        &__title {
+            &-img {
+                margin-top: -7px;
+                max-width: 320px;
+            }
+        }
+        &__members {
+            align-items: flex-start;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 940px;
+            padding: 40px 0 140px;
+        }
+        &__member {
+            &-x {
+                height: 50px;
+            }
+            &-icon {
+                width: 24px;
+            }
         }
     }
 }

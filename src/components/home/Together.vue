@@ -30,20 +30,19 @@
 </template>
 
 <style lang="scss">
-$titleBgHeight: 38px;
 .together {
     &__title {
         align-items: flex-start;
         background: transparent url('@/assets/images/bg/tf-horizontal.png') repeat-x top center;
-        background-size: auto $titleBgHeight; // 76px
+        background-size: auto var(--titleBgHeight);
         color: transparent;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         font-size: 0;
         margin-bottom: 16px;
-        min-height: $titleBgHeight;
-        padding-top: $titleBgHeight;
+        min-height: var(--titleBgHeight);
+        padding-top: var(--titleBgHeight);
         width: 100%;
 
         &-img { // 958px
@@ -96,6 +95,22 @@ $titleBgHeight: 38px;
 
         strong {
             color: var(--text-light);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .together {
+        &__title {
+            padding-right: 40px;
+
+            &-img { // 958px
+                margin-top: -7px;
+                max-width: 500px;
+            }
+            &-tf { // 958px
+                max-width: 80px;
+            }
         }
     }
 }

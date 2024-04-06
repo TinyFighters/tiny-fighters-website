@@ -90,4 +90,56 @@
         width: 110%;
     }
 }
+
+@media (min-width: 768px) {
+    .community {
+        &__title {
+            font-size: 5rem;
+        }
+        &__subtitle {
+            font-size: 7rem;
+            padding: 8px 0;
+
+            &::before {
+                height: 4px;
+                width: 60px;
+            }
+        }
+        br {
+            display: none;
+        }
+        &__socials {
+            gap: 16px;
+            margin-top: 16px;
+        }
+        &__social {
+            border-radius: 6px;
+            height: 78px;
+
+            &-discord {
+                width: 42px;
+            }
+            &-x {
+                width: 36px;
+            }
+            &-linktree {
+                width: 54px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .community {
+        margin: -680px 0 -900px;
+        padding: 800px 0 1000px;
+
+        &__title {
+            font-size: 5.8rem;
+        }
+        &__subtitle {
+            font-size: 7.8rem;
+        }
+    }
+}
 </style>

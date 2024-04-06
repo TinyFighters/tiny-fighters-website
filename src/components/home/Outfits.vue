@@ -107,6 +107,8 @@ const selectedOutfit = ref(8);
         background: linear-gradient(79deg, #FFBA5A 1.72%, #FAA021 98.29%);
         border: 12px solid var(--text);
         border-radius: 20px;
+        margin: 0 auto;
+        max-width: 992px;
         overflow: hidden;
     }
     &__podium {
@@ -141,13 +143,44 @@ const selectedOutfit = ref(8);
     }
     &__desc {
         color: var(--text-light);
-        font-size: 2rem; // 2.8rem
+        font-size: 2rem;
         margin: 12px auto 24px;
         text-align: center;
     }
     &__tf {
         display: block;
         margin: 0 auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .outfits {
+        &__viewer {
+            align-items: center;
+            display: flex;
+            gap: 16px;
+            padding: 32px;
+        }
+        &__podium {
+            flex-grow: 1;
+        }
+        &__list {
+            margin-top: 0;
+            position: relative;
+            z-index: 1;
+        }
+        &__desc {
+            font-size: 2.8rem;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .outfits {
+        &__podium {
+            height: 400px;
+        }
     }
 }
 

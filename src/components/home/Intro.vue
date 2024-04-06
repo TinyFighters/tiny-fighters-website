@@ -17,7 +17,10 @@ import TinyFighters from '@/components/icons/TinyFighters.vue';
         display: block;
         margin: 0 auto;
         margin-bottom: 24px;
-        max-width: 76%;
+        max-width: 884px;
+        position: relative;
+        width: 76%;
+        z-index: 1;
     }
     &__illu {
         background: transparent url('@/assets/images/illu/tf-intro.png') no-repeat center center;
@@ -30,6 +33,26 @@ import TinyFighters from '@/components/icons/TinyFighters.vue';
     .intro {
         &__illu {
             height: 280px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .intro {
+        padding-top: 100px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .intro {
+        padding-top: 360px;
+
+        &__logo {
+            margin-bottom: -420px;
+        }
+        &__illu {
+            height: 580px;
+            opacity: 0.36;
         }
     }
 }
