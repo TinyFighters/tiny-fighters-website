@@ -1,8 +1,10 @@
 html {
+    background: var(--orange) url('@/assets/images/bg/bg.png') no-repeat top right;
+    background-size: 160% auto;
     font-size: 10px;
 }
 body {
-    background: var(--orange) url('@/assets/images/bg/bg.png') no-repeat top right;
+    background: transparent url('@/assets/images/bg/bg-reversed.png') no-repeat bottom left;
     background-size: 160% auto;
     color: var(--white);
     font-family: var(--fonts);
