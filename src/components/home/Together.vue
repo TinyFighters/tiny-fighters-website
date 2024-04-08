@@ -55,7 +55,7 @@
     }
     &__row {
         overflow: hidden;
-        padding: 16px;
+        padding: 0px 16px 50px;
         text-align: center;
     }
     &__img {
@@ -111,6 +111,41 @@
             &-tf { // 958px
                 max-width: 80px;
             }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .together {
+        &__row {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 1024px;
+            padding: 20px 40px 100px;
+
+            &:nth-child(odd) {
+                flex-direction: row-reverse;
+            }
+        }
+        &__img {
+            margin: 0;
+
+            &-over {
+                &-1 {
+                    left: 43%;
+                }
+                &-2 {
+                    left: 65%;
+                }
+                &-3 {
+                    left: 19%;
+                }
+            }
+        }
+        &__txt {
+            font-size: 4rem;
         }
     }
 }

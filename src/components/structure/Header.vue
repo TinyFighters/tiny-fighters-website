@@ -52,4 +52,10 @@ import Nav from '@/components/structure/Nav.vue';
         justify-content: center;
     }
 }
+
+@media (min-width: 1024px) {
+    .header {
+        background-size: 1360px auto;
+    }
+}
 </style>

@@ -131,6 +131,7 @@
 
 @media (min-width: 1024px) {
     .community {
+        background-size: auto 3000px;
         margin: -680px 0 -900px;
         padding: 800px 0 1000px;
 
@@ -139,6 +140,18 @@
         }
         &__subtitle {
             font-size: 7.8rem;
+        }
+        &__img {
+            width: 1552px;
+        }
+    }
+}
+
+@media (min-width: 1552px) {
+    .community {
+        &__img {
+            left: unset;
+            transform: none;
         }
     }
 }
