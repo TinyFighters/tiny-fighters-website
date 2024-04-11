@@ -9,8 +9,8 @@
             X
         </a>
         <button
-            class="nav__link"
-            @click="openNav = !openNav"><i class="nav__link-burger"></i></button>
+            class="nav__link nav__link-open"
+            @click.stop="openNav = !openNav"><i class="nav__link-burger"></i></button>
         <ul
             class="nav__list"
             :class="{ 'nav__list-active': openNav }">
@@ -24,13 +24,20 @@
                 <RouterLink class="nav__link" to="/team">Team</RouterLink>
             </li>
             <li class="nav__item">
-                <span class="nav__link nav__link-more">More</span>
-                <ul class="nav__sublist">
+                <span
+                    class="nav__link nav__link-more"
+                    @click.stop="openMore = !openMore">
+                    More
+                    <Arrow class="nav__link-arrow" />
+                </span>
+                <ul
+                    class="nav__sublist"
+                    :class="{ 'nav__sublist-active': openMore }">
                     <li class="nav__item">
-                        <RouterLink class="nav__link" to="/">Gallery</RouterLink>
+                        <RouterLink class="nav__link" to="/gallery">Gallery</RouterLink>
                     </li>
                     <li class="nav__item">
-                        <RouterLink class="nav__link" to="/story">Branding Kit</RouterLink>
+                        <RouterLink class="nav__link" to="/brandingkit">Branding Kit</RouterLink>
                     </li>
                 </ul>
             </li>
@@ -41,8 +48,14 @@
 <script setup>
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
+import Arrow from '@/components/icons/Arrow.vue';
 
 const openNav = ref(false);
+const openMore = ref(false);
+
+document.querySelector('html').addEventListener('click', () => {
+    openMore.value = false;
+});
 </script>
 
 <style lang="scss">
@@ -126,6 +139,55 @@ const openNav = ref(false);
         }
         &-x {
             width: 16px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav {
+        &__list {
+            align-items: center;
+            display: flex;
+            gap: 8px;
+            order: -1;
+            position: static;
+        }
+        &__sublist {
+            display: none;
+            flex-direction: column;
+            gap: 8px;
+            position: absolute;
+            top: 100%; left: 0;
+            text-align: center;
+
+            &-active {
+                display: flex;
+            }
+        }
+        &__item {
+            margin-bottom: 0;
+            position: relative;
+        }
+        &__link {
+            font-size: 3rem;
+            justify-content: center;
+            height: 40px;
+            padding: 0 12px;
+            width: 100%;
+
+            &-open {
+                display: none;
+            }
+            &-more {
+                display: inline-flex;
+                gap: 8px;
+            }
+            &-arrow {
+                width: 20px;
+            }
+        }
+        &__social {
+            font-size: 0;
         }
     }
 }

@@ -63,6 +63,20 @@ const selectedNft = ref(null);
         margin-bottom: 40px;
         overflow: auto;
         padding: 100px 0 32px;
+
+        &::-webkit-scrollbar-track {
+            border-radius: 8px;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        &::-webkit-scrollbar {
+            background-color: var(--orange);
+            height: 8px;
+            width: 8px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 8px;
+            background-color: var(--orange-medium);
+        }
     }
     &__frame {
         cursor: pointer;

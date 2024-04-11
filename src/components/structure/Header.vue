@@ -56,6 +56,8 @@ import Nav from '@/components/structure/Nav.vue';
 @media (min-width: 1024px) {
     .header {
         background-size: 1360px auto;
+        justify-content: flex-start;
+        padding: 24px;
     }
 }
 </style>

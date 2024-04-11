@@ -5,7 +5,7 @@
 <style lang="scss">
 .footer {
     color: var(--text);
-    padding: 20px 12px;
+    padding: 20px 12px 80px;
     text-align: center;
 }
 </style>
