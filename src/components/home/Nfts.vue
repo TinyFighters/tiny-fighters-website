@@ -39,7 +39,7 @@
                 @click="selectedNft = 8"><img class="nfts__img" src="@/assets/images/nfts/Warrior.gif" /></div>
         </div>
         <div class="nfts__release">
-            <div class="nfts__release-date">Release : tdb</div>
+            <div class="nfts__release-date">Release : tbd</div>
         </div>
     </section>
 </template>
