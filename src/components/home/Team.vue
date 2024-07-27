@@ -20,7 +20,7 @@
                 </a>
             </div>
             <div class="team__member">
-                <img class="team__member-img" src="@/assets/images/team/lenux.png" />
+                <img class="team__member-img" src="@/assets/images/team/mistervain.png" />
                 <a class="team__member-x community__social" href="https://x.com" target="_blank">
                     X
                     <img class="team__member-icon community__social-icon community__social-x" src="@/assets/images/icons/x.svg">
